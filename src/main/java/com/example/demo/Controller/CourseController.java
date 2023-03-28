@@ -1,4 +1,4 @@
-package com.example.demo.controllers;
+package com.example.demo.Controller;
 
 import java.util.List;
 import java.util.Optional;
@@ -14,14 +14,14 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.Course.Course;
+import com.example.demo.Course.CourseRepository;
 import com.example.demo.Course.CourseService;
-import com.example.demo.Course.CourseServiceImpl;
 
 @RestController
 public class CourseController {
 
     @Autowired
-    private CourseService course;
+    private CourseRepository course;
 
     @GetMapping("/get_courses")
     public List<Course> getcourses() {
